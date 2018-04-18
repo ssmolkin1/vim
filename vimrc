@@ -63,8 +63,8 @@ endif
 " My custom options
 
 " backup and swap files
-set backupdir= /home/sam/.vim/backup
-set directory= /home/sam/.vim/backup
+set backupdir=/home/sam/.vim/backup
+set directory=/home/sam/.vim/backup
 
 syntax on
 filetype plugin indent on
