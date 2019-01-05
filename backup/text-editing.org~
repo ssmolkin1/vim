@@ -1,0 +1,27 @@
+* Emacs
+** Version control
+I created a new github repo: https://github.com/ssmolkin1/emacs.d to version control my =init.el=. It will ignore everything except my snippets and my =init.el=. Need to delete =.emacs= from home directories so that it does not override =init.el=.
+** Spelling
+Emacs relies on external spell check for spelling:
+- ispell (outdated)
+- aspell (not maintained)
+- hunspell (maintained, but maybe worse than aspell)
+
+Both aspell and hunspell mask themselves as ispell for backwards compatibility.
+
+Need to install dictionaries on top of the spell checker as well. These are also available in the Arch repos. E.g., =aspell-en=.
+
+Flyspell and ispell in emacs should then work without any extra config. Need to enable flyspell manually or add hooks, though.
+<<<<<<< Updated upstream
+** LaTeX
+First I installed auctex using use-packaged. For some reason, I have to set =:defer t= for this to work...
+Then I installed texlive-core on my system.
+=======
+
+Press 'i' when checking a word to add it to your personal dictionary.
+** LaTeX
+Need the packages =texlive-core= and =texlive-latexextra= (if you don't get the second one, you will forever be installing sty files manually)
+If you do install a .sty file manually, try to install it as a package via AUR
+If using glossaries, need to use AUCTex to compile glossaries first (choose from the C-c C-c menu), then run latex. 
+Use 'k' to kill the PDF View buffer after viewing, otherwise it could prevent overwriting the file.
+>>>>>>> Stashed changes

@@ -14,13 +14,21 @@
 exec_always --no-startup-id compton -b
 
 ## Color scheme and wallpaper
- exec --no-startup-id wal -R &
+exec --no-startup-id wal -R &
 
 ## Polybar
- exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
+
+## Autorotate scripts
+## Moved these from surfacetools to $HOME/.local/bin, and their icons to $HOME/.local/share/{appname}, AND RAN WITH PYTHON (not sure why I had to...) and this made it work.
+exec --no-startup-id python $HOME/.local/bin/autorotate &
+exec --no-startup-id python $HOME/.local/bin/penmon &
 
 ## Network manager applet
 exec --no-startup-id nm-applet &
+
+## onboard keyboard
+exec --no-startup-id onboard &
 
 ## Start dropbox
 # exec --no-startup-id dropbox &
@@ -29,7 +37,7 @@ exec --no-startup-id nm-applet &
 # exec --no-startup-id i3-msg 'workspace 1; exec --no-startup-id urxvt &' 
 
 ## Chromium
-# exec --no-startup-id i3-msg 'workspace 1; exec --no-startup-id chromium &' 
+# exec --no-startup-id i3-msg 'workspace 1; exec --no-startup-id $HOME/launchchromium.sh &' 
 
 ## Wallpaper
 # exec_always --no-startup-id $HOME/.fehbg &
@@ -38,12 +46,8 @@ exec --no-startup-id nm-applet &
 # Actually turns out it's not necessary, onboard is smart enough somehow... but idk if I want this or not...
 #focus_follows_mouse no
 
-# Disable / enable touchpad. Use `xinput list` to determine the correct id
-bindsym $mod+Shift+p exec --no-startup-id xinput disable 16 &
-bindsym $mod+p exec --no-startup-id xinput enable 16 &
-
-# Start unclutter to get rid of mouse cursor when mouse not moving
-exec --no-startup-id unclutter &
+# turn off screen
+#bindsym $mod+Shift+o exec $HOME/screenoff.sh 
 
 # Disable / enable touchpad. Use `xinput list` to determine the correct id
 bindsym $mod+Shift+p exec --no-startup-id xinput disable 16 &
@@ -87,7 +91,7 @@ font pango:DejaVu Sans Mono 14
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Font awesome rofi
-# bindsym $mod+t exec /home/sam/rofi-fontawesome/fontawesome-menu/fontawesome-menu -f /home/sam/rofi-fontawesome/fontawesome-menu/fa5-icon-list.txt -o '-i -columns 4'
+bindsym $mod+t exec /home/sam/rofi-fontawesome/fontawesome-menu/fontawesome-menu -f /home/sam/rofi-fontawesome/fontawesome-menu/fa5-icon-list.txt -o '-i -columns 4'
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -100,7 +104,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id urxvt &
-# bindsym $mod+Shift+Return exec urxvt --no-startup-id -cd "`xcwd`" &
+bindsym $mod+Shift+Return exec urxvt --no-startup-id -cd "`xcwd`" &
 
 # start emacs
 bindsym $mod+Shift+Return exec --no-startup-id emacsclient -c &

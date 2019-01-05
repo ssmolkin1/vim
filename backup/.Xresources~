@@ -1,0 +1,32 @@
+! Font
+URxvt.font:	xft:xos4 Terminus:pixelsize=35
+! Spacing
+URxvt.letterSpace:  +5
+! ScrollBar
+URxvt.scrollBar:	false
+! Transparent
+URxvt.transparent:   true
+URxvt.shading:       20
+! URxvt Perl Scripts
+URxvt.perl-lib:         /usr/lib/urxvt/perl/
+URxvt.perl-ext-common:  default,matcher,tabbedex,resize-font,keyboard-select,url-select
+URxvt.url-launcher:     /usr/bin/xdg-open
+URxvt.matcher.button:   1
+! Tabs
+URxvt.tabbed.tabbar-fg: 2
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 2
+URxvt.tabbed.tab-bg: 0
+URxvt.tabbed.autohide:  yes
+URxvt.tabbed.new-button:  no
+URxvt.tabbed.title: yes
+! resize-font
+URxvt.keysym.C-j:     perl:resize-font:smaller
+URxvt.keysym.C-k:     perl:resize-font:bigger
+! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher:  /usr/bin/xdg-open
+URxvt.url-select.underline: true
+! keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
