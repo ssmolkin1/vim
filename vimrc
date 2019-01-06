@@ -69,8 +69,9 @@ set directory=/home/sam/.vim/backup
 syntax on
 filetype plugin indent on
 
+set relativenumber
 set number
-set tw=80
+"set tw=80
 set smartcase
 set smarttab
 set smartindent
