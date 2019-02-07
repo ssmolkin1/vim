@@ -1,0 +1,18 @@
+@startuml
+Class01 <|-- Club2
+Class03 --* Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 -- Class10
+Class01 <|-- Class03
+Club1 -- club7
+
+class contract <<contract>> {
+  +{static} int myInt
+  -string privateVariable
+  ~void packagePrivateMethod()
+  -void privateVariable
+  #{abstract} char protectedMethod(int param)
+}
+
+@enduml

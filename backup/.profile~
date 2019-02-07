@@ -1,0 +1,24 @@
+# Path
+##  Path to ccache
+  export PATH="/usr/lib/ccache/bin/:$PATH" 
+
+##  Path to .local/bin (ghc-mod, python, my own custom executables)
+  export PATH="$HOME/.local/bin:$PATH"
+
+## Path to Rust Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
+##  Path to NPM global modules
+  export PATH="$HOME/.node_modules_global/bin:$PATH"
+
+# GTK 3 scaling
+  export GDK_DPI_SCALE=1.75
+
+# Custom functions
+## lock and turn screen off
+lockscreen ()
+{
+  xset dpms force off && i3lock -i $HOME/.config/lockscreen_img.png 
+}
+# use gpg-agent as SSH agent
+export SSH_AUTH_SOCK="/run/user/$(id -u)/gnupg/S.gpg-agent.ssh"

@@ -1,0 +1,20 @@
+pragma solidity ^0.4.25;
+
+import "./Ownable.sol";
+
+contract RallyWallets is Ownable {
+    // Map of wallet addresses to keccak256(_name). Used to prove that a wallet belongs to an Organizer or Activist who has been vetted by RallyNet
+    mapping(address => bytes32) public walletOwners;
+    
+    constructor() Ownable() public {}
+
+    function addWallet (address _wallet, bytes32 _walletOwner) public onlyOwner {
+        require(walletOwners[_wallet] == bytes32(0), "Wallet already registered to another owner.");
+        walletOwners[_wallet] = _walletOwner;
+    }
+    
+    function updateWalletOwner (address _wallet, bytes32 _newOwner) public onlyOwner {
+        require(walletOwners[_wallet] != bytes32(0), "Wallet is not registered.");
+        walletOwners[_wallet] = _newOwner;
+    }
+}
