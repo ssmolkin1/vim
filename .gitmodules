@@ -1,0 +1,9 @@
+[submodule "pack/sam/start/lightline.vim"]
+	path = pack/sam/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule "pack/sam/start/vim-yankstack"]
+	path = pack/sam/start/vim-yankstack
+	url = https://github.com/maxbrunsfeld/vim-yankstack.git
+[submodule "pack/sam/start/vim-easymotion"]
+	path = pack/sam/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
