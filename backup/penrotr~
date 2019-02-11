@@ -1,7 +1,0 @@
-#!/usr/bin/sh
-
-#xinput set-prop 'ipts 1B96:001F Pen Pen (0)' 'Coordinate Transformation Matrix' 1 0 0 0 1 0 0 0 1
-# xinput set-prop 'ipts 1B96:001F Pen Pen (0)' 'Coordinate Transformation Matrix' -1 0 1 0 -1 1 0 0 1
-# xinput set-prop 'ipts 1B96:001F Pen Pen (0)' 'Coordinate Transformation Matrix' 0 -1 1 1 0 0 0 0 1
- xinput set-prop 'ipts 1B96:001F Pen Pen (0)' 'Coordinate Transformation Matrix' 0 1 0 -1 0 1 0 0 1
-

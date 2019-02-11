@@ -7,3 +7,6 @@
 [submodule "pack/sam/start/vim-easymotion"]
 	path = pack/sam/start/vim-easymotion
 	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "pack/sam/start/vim-ps1"]
+	path = pack/sam/start/vim-ps1
+	url = https://github.com/PProvost/vim-ps1.git

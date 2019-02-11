@@ -61,10 +61,11 @@ if has('syntax') && has('eval')
 endif
 
 " My custom options
+set shell=C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe
 
 " backup and swap files
-set backupdir=/home/sam/.vim/backup
-set directory=/home/sam/.vim/backup
+set backupdir=C:\\Users\\ssmol\\vimfiles\\backup
+set directory=C:\\Users\\ssmol\\vimfiles\\backup
 
 syntax on
 filetype plugin indent on
@@ -88,23 +89,11 @@ let mapleader = ","
 " set nu
 nmap <leader>nu :set nu!<cr>
 
-" Make alt key work
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
-
 set timeout ttimeoutlen=50
 
 " Quickfix window
 nnoremap <leader>q :copen<cr>
 nnoremap <leader>qw :ccl<cr>
-
-" Copy/paste to/from clipboard
-vmap <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<cr>:call system("xclip -i", getreg("\""))<cr>
-nmap <c-m-v> :call setreg("\"",system("xclip -o -selection clipboard"))<cr>p")")")"))
 
 " Turn on spellcheck
 map <F6> :set spell! spelllang=en_us<cr>
@@ -141,12 +130,3 @@ map <leader><leader>tm :tabmove
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
 map <leader><leader>te :tabedit <c-r>=expand("%:p:h")<cr>
-
-" Use ag with ack.vim
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-" Ctrlp fuzzy file finder
-nmap <leader><leader>o :CtrlP<cr>
-
-" Open nerdtree
-map <leader>o :NERDTreeToggle<CR>

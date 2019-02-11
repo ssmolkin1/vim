@@ -1,3 +1,0 @@
-gesture: swipe up 3	xdotool key super+f
-gesture: pinch out 3	xdotool key control+shift+plus
-gesture: pinch in 3	xdotool key control+minus

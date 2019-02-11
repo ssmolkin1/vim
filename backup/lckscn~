@@ -1,3 +1,0 @@
-#!/usr/bin/sh
-
-i3lock -i $HOME/.config/lockscreen_img.png && xset dpms force off 
