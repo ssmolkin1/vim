@@ -61,11 +61,13 @@ if has('syntax') && has('eval')
 endif
 
 " My custom options
-set shell=C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe
+set shell=C:\\Program\ Files\\PowerShell\\6\\pwsh.exe
 
 " backup and swap files
-set backupdir=C:\\Users\\ssmol\\vimfiles\\backup
-set directory=C:\\Users\\ssmol\\vimfiles\\backup
+set backupdir=C:\Users\ssmol\AppData\Local\Temp
+set directory=C:\Users\ssmol\AppData\Local\Temp
+set undodir=C:\Users\ssmol\AppData\Local\Temp
+
 
 syntax on
 filetype plugin indent on
